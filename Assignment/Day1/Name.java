@@ -300,7 +300,7 @@ System.out.println("The Largest Number is :" +c);
 
 }
 }
-}
+} 
 */
 
 
@@ -311,7 +311,7 @@ System.out.println("The Largest Number is :" +c);
 Write a Java program that takes a number as input and prints the reverse of that number.Test Data :
 Input number: 12345
 Expected Output :
-The reverse of 12345 is 54321.
+The reverse of 12345 is 54321.   
 */
 
 
