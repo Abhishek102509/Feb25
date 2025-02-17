@@ -40,7 +40,7 @@ Expected Output :
 16*/
 
 
-/*
+
 class Divide{
 public static void main(String arg[]){
 int a = 50;
@@ -50,7 +50,7 @@ System.out.println(a/b);
 
 
 }
-}*/
+}
 
 
 
@@ -72,7 +72,7 @@ d. 5 + 15 / 3 * 2 -  8 % 3
 
 */
 
-/*
+
 class Arithmetic{
 public static void main(String arg[]){
 int a = -5  + 8 * 6;
@@ -88,7 +88,7 @@ System.out.println(c);
 System.out.println(d);
 }
 }
-*/
+
 
 /*
 5. Multiply Two Numbers
@@ -99,7 +99,7 @@ Input second number: 5
 Expected Output :25 x 5 = 125
 
 */
-/*
+
 class Multiply{
    public static void main(String arg[]){
 int a = 25;
@@ -109,7 +109,7 @@ System.out.println("25*5=" + c);
 
 }
 }
-*/
+
 
 /*
 6. Basic Arithmetic Operations
@@ -126,7 +126,7 @@ Expected Output :
 
 */
 
-/*
+
 class Operations{
 public static void main(String arg[]){
 int a = 125;
@@ -143,7 +143,7 @@ System.out.println("125 / 24 = "+f);
 System.out.println("125 mod 24 = "+g);
 }
 }
-*/
+
 
 
 /*
@@ -165,7 +165,7 @@ Expected Output :
 */
 
 
-/*
+
 
 class Table{
 public static void main(String arg[]){
@@ -177,7 +177,7 @@ System.out.println(n +"*"+ i + "="+ n*i);
 }
 
 }
-*/
+
 
 
 
@@ -198,7 +198,7 @@ Second number: 10
 
 */
 
-/*
+
 class Swap{
 public static void main(String arg[]){
 int a = 10;
@@ -215,7 +215,7 @@ System.out.println("First Number:"+a);
 System.out.println("Second Number:"+b);
 }
 }
-*/
+
 
 /*
 9. Calculate the Area of a Circle
@@ -228,7 +228,7 @@ Area of the circle: 153.93804
 */
 
 
-/*
+
 class Area{
 public static void main(String arg[]){
 int r = 7;
@@ -239,7 +239,7 @@ System.out.println(area);
 }
 }
 
-*/ 
+
 
 /*
 10. Check If a Number Is Even or Odd
@@ -252,7 +252,7 @@ The number 15 is Odd.
 */
 
 
-/*
+
 class Evenodd{
    public static void main(String arg[]){
       int num = 15;
@@ -266,7 +266,7 @@ System.out.println("The Number 15 is Odd");
 }
 }
 
-*/
+
 
 
 
@@ -283,7 +283,7 @@ The largest number is 45.
 
 
 
-/*
+
 class LargestNum{
    public static void main(String arg[]){
   int a = 12; 
@@ -301,7 +301,7 @@ System.out.println("The Largest Number is :" +c);
 }
 }
 } 
-*/
+
 
 
 
