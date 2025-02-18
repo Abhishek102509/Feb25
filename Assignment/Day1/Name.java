@@ -323,10 +323,21 @@ The reverse of 12345 is 54321.
 Write a Java program to calculate the average of thr ee numbers.
 Test Data :
 Input first number: 20
-Input second number: 40 Input third number: 60
+Input second number: 40 
+Input third number: 60
 Expected Output :
 The average is: 40.0
 */
+
+class Avg{
+public static void main(String arg[]){
+  int a =20;
+int b = 40;
+int c = 60;
+float d = (a+b+c)/3;
+System.out.println("The avrage is :" +d);
+}
+}
 
 
 
