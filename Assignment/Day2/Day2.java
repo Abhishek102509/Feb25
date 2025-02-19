@@ -894,7 +894,7 @@ is a weekday or weekend
 
 
 
-/*
+
 class main{
 public static void main(String args[]){
 
@@ -903,24 +903,59 @@ int Day = 1 ;
 switch(Day){
 case 0 :
 System.out.println("Sunday");
+switch(Day){
+case 0:
+System.out.println("weekend");
+break;
+}
 break;
 case 1 :
 System.out.println("Monday");
+switch(Day){
+case 1:
+System.out.println("weekday");
+break;
+}
 break;
 case 2 :
 System.out.println("Tuesday");
+switch(Day){
+case 2:
+System.out.println("weekday");
+break;
+}
 break;
 case 3 :
 System.out.println("Wednesday");
+switch(Day){
+case 3:
+System.out.println("weekday");
+break;
+}
 break;
 case 4 :
 System.out.println("Thursday");
+switch(Day){
+case 4:
+System.out.println("weekday");
+break;
+}
 break;
 case 5 :
 System.out.println("Friday");
+switch(Day){
+case 5:
+System.out.println("weekday");
+break;
+}
 break;
 case 6 :
 System.out.println("Saturday");
+switch(Day){
+case 6:
+System.out.println("weekend");
+break;
+}
 break;
 default :
 System.out.println("no Day");
@@ -933,7 +968,7 @@ System.out.println("no Day");
 
 }
 
-*/
+
 //=============================================================================
 /*
 Question 3: Calculator 
@@ -1026,7 +1061,7 @@ if(membership){
 d +=0.05;
 System.out.println(d); 
 }
-*/
+
 
 } 
 }
@@ -1038,3 +1073,22 @@ Write a program that determines whether a student passes or fails based on their
 subjects. If the student scores more than 40 in all subjects, they pass. If the student fails in one or 
 more subjects, print the number of subjects they failed in.
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

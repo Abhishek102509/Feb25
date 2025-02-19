@@ -377,22 +377,45 @@ The number 17 is Prime.
 
 
 
+
+
 /*
 17. Print the First N Natural Numbers
 Write a Java program to print the first N natural numbers, where N is provided by the user.
 Test Data :
 Input a number: 6
 Expected Output :1 2 3 4 5 6
+*/
+
+class main{
+public static void main(String args[]){
+int num = 6;
+for(int i = 1; i<=num; i++){
+System.out.print(" "+i);
+}
+}
+}
+
+
+/*
 18. Convert Celsius to Fahrenheit
 Write a Java program to convert a temperature from Celsius to Fahrenheit.Test Data :
 Input temperature in Celsius: 25
-Formu la : Fahrenheit = (Celsius * 9/5) + 32 Expected Output :
+Formula : Fahrenheit = (Celsius * 9/5) + 32 Expected Output :
 25°C is equal to 77.0°F
 
 */
 
+/*
+class temperature{
+public static void main (String args[]){
+int Celsius = 25 ;
+double Fahrenheit =( (Celsius * 9/5) + 32);
+System.out.println(Celsius+"°C is equal to " +   Fahrenheit);
+}
+}
 
-
+*/
 
 /*
 19. Calculate the Power of a Number
@@ -404,17 +427,57 @@ Expected Output :
 3 raised to the power 4 is 81
 */
 
+/*
+class Power{
+public static void main(String arg[]){
+int b =3;
+int e = 4;
+System.out.println(b+"raised to the power"+e+" is " +  Math.pow(b,e));
 
+}
+}
 
+*/
 
+//===================================================
 /*
 20. Count the Number of Digits in a Number
-Write a Java program that counts the number of digits in a given n umber.
+Write a Java program that counts the number of digits in a given number.
 Test Data :
 Input number: 123456
 Expected Output :
 The number 123456 has 6 digits
 */
+
+
+/*
+class digit{
+public static void main(String args[]){
+ long num = 12345;
+int count =0;
+if (num ==0 ){
+count =1;
+}else{
+ while(num !=0){
+ num /=10;
+ count++;
+}
+}
+System.out.println(count);
+}
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
