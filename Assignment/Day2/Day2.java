@@ -1,3 +1,7 @@
+
+import java.util.Scanner;
+
+
 class Day2{
 public static void main(String args[]){
 
@@ -856,11 +860,16 @@ Write a program to classify student grades based on the following criteria:
 
 //--------------------------------------------------------------
 
-/*
+
 
 class Main{
 public static void main(String args[]){
-int n=40;
+
+int n;
+
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter a Number");
+n = sc.nextInt();
 if(n>=90){
 System.out.println("A");
 }
@@ -881,7 +890,7 @@ System.out.println("Print F");
 }
 }
 
-*/
+
 //===================================================
 
 /*
@@ -894,7 +903,7 @@ is a weekday or weekend
 
 
 
-
+/*
 class main{
 public static void main(String args[]){
 
@@ -968,7 +977,7 @@ System.out.println("no Day");
 
 }
 
-
+*/
 //=============================================================================
 /*
 Question 3: Calculator 
@@ -1056,16 +1065,7 @@ System.out.println(d);
 else {
 System.out.println("No discount");
 }
-/*
-if(membership){
-d +=0.05;
-System.out.println(d); 
-}
 
-
-} 
-}
-*/
 //==============================================================================
 /*
 Question 5: Student Pass/Fail Status with Nested Switch 
@@ -1073,6 +1073,45 @@ Write a program that determines whether a student passes or fails based on their
 subjects. If the student scores more than 40 in all subjects, they pass. If the student fails in one or 
 more subjects, print the number of subjects they failed in.
 */
+
+class Grade{
+public static void main(String arg[]){
+   int grade1,grade2,grade3;
+Scanner sc = new Scanner(System.in);
+System.out.println("Grade for Student 1");
+grade1 = sc.nextInt(); 
+System.out.println("Grade for Student 2");
+grade2 = sc.nextInt(); 
+System.out.println("Grade for Student 3");
+grade3 = sc.nextInt(); 
+
+int failsub =0;
+switch(grade1>40 ? "pass" : "fail"){
+case "fail":
+failsub++;
+break;
+}
+switch(grade2>40 ? "pass" : "fail"){
+case "fail":
+failsub++;
+break;
+}
+switch(grade3>40 ? "pass" : "fail"){
+case "fail":
+failsub++;
+break;
+}
+if (failsub == 0){
+System.out.println("pass all subject");
+}else{
+System.out.println("fail in subject"+" "+failsub +" ");
+}
+
+}
+}
+
+
+
 
 
 

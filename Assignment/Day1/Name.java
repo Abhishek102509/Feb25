@@ -1,3 +1,5 @@
+
+import java.util.Scanner;
 /*1. Print 'Hello' and Your Name
 Write a Java program to print 'Hello' on the screen and then print your name on a separate line.
 Expected Output :
@@ -315,6 +317,24 @@ The reverse of 12345 is 54321.
 */
 
 
+//import java.util.Scanner;
+class Reverse{
+public static void main(String args[]){
+int num,rev ;
+
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter a number");
+num = sc.nextInt();
+
+ while(num>0){
+  rev=num%10;
+System.out.print(+rev);
+num=num/10;
+}
+}
+}
+
+
 
 
 
@@ -348,7 +368,28 @@ Write a Java program to print the Fibonacci series up to the 10th number.Expecte
 0 1 1 2 3 5 8 13 21 34
 
 */
+class Fibobacci{
+public static void main (String args[]){
 
+
+int num ;
+Scanner sc =new Scanner(System.in);
+System.out.println("Enter a number");
+num = sc.nextInt();
+
+int a =0;
+int b=1;
+int c;
+for(int i = 1; i<=num; i++){
+System.out.print(" "+a);
+
+  c=a+b;
+  a= b;
+  b=c;
+  
+}
+}
+}
 
 
 
@@ -360,6 +401,20 @@ Input a number: 5
 Expected Output :
 Factorial of 5 is 120.
 */
+
+class Factorial{
+public static void main (String args[]){
+ int num ;
+ int  fact =1;
+ Scanner sc = new Scanner(System.in);
+System.out.println("Enter a number");
+ num = sc.nextInt();
+for (int i=1; i <=num; i++){
+     fact = fact*i;
+}
+System.out.println ("Factorial of "+ num +" is "+fact);
+}
+}
 
 
 
@@ -373,7 +428,31 @@ Expected Output :
 The number 17 is Prime.
 */
 
+class Primenum{
+public static void main(String arg[]){
+  int num;
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter a Number");
+num = sc.nextInt();
+if (num<=1){
+System.out.println("Not prime Number");
+}else{
+for( int i =2; i<=Math.sqrt(num);i++){
+if (num % i == 0){
+System.out.println ("Prime Number" );
+}else {
+System.out.println ("Not  Prime Number" );
 
+}
+
+
+}
+}
+
+
+
+}
+}
 
 
 
@@ -387,15 +466,17 @@ Input a number: 6
 Expected Output :1 2 3 4 5 6
 */
 
+
+/*
 class main{
 public static void main(String args[]){
 int num = 6;
 for(int i = 1; i<=num; i++){
-System.out.print(" "+i);
+System.out.print(i+" ");
 }
 }
 }
-
+*/
 
 /*
 18. Convert Celsius to Fahrenheit
@@ -450,10 +531,14 @@ The number 123456 has 6 digits
 */
 
 
-/*
+
 class digit{
 public static void main(String args[]){
- long num = 12345;
+ long num ;
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter a Number");
+num = sc.nextLong();
+
 int count =0;
 if (num ==0 ){
 count =1;
@@ -466,7 +551,7 @@ count =1;
 System.out.println(count);
 }
 }
-*/
+
 
 
 
