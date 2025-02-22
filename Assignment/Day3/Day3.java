@@ -74,7 +74,7 @@ class DoWhileIncorrectCondition {
  do { 
  System.out.println(num);
 num++;  
- } while (num < 10); 
+ } while (num > 10); 
    
  } 
 }
