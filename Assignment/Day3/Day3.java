@@ -727,11 +727,443 @@ System.out.println(i);
 System.out.println(j);
 }
 }
+//============================================================
+
+/*
+12. Write a program to draw the following pattern: 
+***** 
+***** 
+***** 
+***** 
+***** 
+
+*/
+
+class Pattern1{
+public static void main(String arg[]){
+int n = 5;
+for(int i = 1; i<=n; i++){
+for(int j = 1; j<=n; j++){
+System.out.print("*");
+}
+System.out.println();
+
+}
+}
+}
+
+//==============================
+/*
+13. Write a program to print the following pattern: 
+1 
+2*2 
+3*3*3 
+4*4*4*4 
+5*5*5*5*5 
+5*5*5*5*5 
+4*4*4*4 
+3*3*3 
+2*2 
+1 
+
+*/
+
+class Pattern2{
+public static void main(String arg[]){
+int n = 5;
+//First 
+for(int i = 1; i<=n; i++){
+for(int j = 1; j<=i; j++){
+System.out.print(i+" ");
+if (j < i) {
+    System.out.print("*");
+}
+}
+System.out.println();
+}
+//second half 
+for(int i = 5; i>=1; i--){
+for(int j = 1; j<=i; j++){
+System.out.print(i+" ");
+if (j < i) {
+    System.out.print("*");
+}
+}
+System.out.println();
+}
 
 
-/**/
-/**/
-/**/
+}
+}
+//=====================
+/*
+14. Write a program to print the following pattern: 
+* 
+ ** 
+ *** 
+ ***** 
+ ******* 
+ ********* 
+
+*/
+
+class Pattern3{
+public static void main(String arg[]){
+int n= 5;
+for(int i =1;i<=n;i++){
+for(int j =1;j<=i*2-1;j++){
+System.out.print("*");
+}
+System.out.println();
+}
+}
+}
+//================================
+/*
+15. Write a program to print the following pattern: 
+    *
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+*/
+
+class Pattern4{
+public static void main(String arg[]){
+int n= 5;
+for(int i =0;i<n;i++){
+for(int j =n-i; j>1;j--){
+System.out.print(" ");
+}
+for(int j =0;j<=i;j++){
+System.out.print(" "+"*");
+} 
+System.out.println();
+}
+}
+}
+//=================================
+/*
+16. Write a program to print the following pattern: 
+       * 
+      * * * 
+     * * * * * 
+    * * * * * * * 
+   * * * * * * * * * 
+
+*/
+class Pattern5{
+public static void main(String arg[]){
+int n= 5;
+for(int i = 1; i<=n; i++){
+for (int j = 1; j<=n-i; j++){
+System.out.print(" ");
+}
+for (int j = 1; j<=i*2-1; j++){
+System.out.print(" " +"*");
+}  
+System.out.println();
+}
+
+}
+}
+
+//===========================
+/*
+17. Write a program to print the following pattern: 
+ * * * * * 
+  * * * *  
+   * * * 
+    * * 
+     * 
+*/
+
+class Pattern7{
+public static void main(String arg[]){
+int n= 5;
+for (int i = 5; i>=1; i--){
+for(int j=1; j<=n-i;j++){
+System.out.print(" ");
+}
+for(int j=1; j<=i;j++){
+System.out.print(" * ");
+}
+System.out.println();
+}
+
+
+}
+}
+
+//=====================
+/*
+18. Write a program to print the following pattern: 
+      * 
+     * * * 
+    * * * * * 
+   * * * * * * * 
+    * * * * * 
+     * * * 
+      * 
+*/
+class Pattern8{
+public static void main(String arg[]){
+int n= 4;
+for (int i=1; i<=n; i++){
+for(int j=1 ; j<=n-i; j++){
+System.out.print(" ");
+}
+for(int j= 1; j<=2*i-1; j++){
+System.out.print(" "+"*");
+}
+System.out.println( );
+}
+
+// half loop
+for (int i = 3; i>=1; i--){
+for(int j = 1; j<=n-i; j++){
+System.out.print(" ");
+}
+for(int j = 1; j<=2*i-1; j++){
+System.out.print(" "+"*");
+}
+System.out.println( );
+}
+
+}
+}
+
+//=====================
+/*
+19. Write a program to print the following pattern: 
+1 
+1*2 
+1*2*3 
+1*2*3*4 
+1*2*3*4*5 
+
+*/
+
+class Pattern9{
+public static void main(String arg[]){
+int n= 5;
+for(int i=1; i<=n; i++){
+for(int j =1; j<=i; j++ ){
+System.out.print(j);
+if(j<i){
+System.out.print("*");
+
+}
+}
+System.out.println();
+
+}
+
+
+}
+}
+//===========================
+/*
+20. Write a program to print the following pattern: 
+5 
+5*4 
+5*4*3 
+5*4*3*2 
+5*4*3*2*1 
+
+*/
+class Pattern10{
+public static void main(String arg[]){
+int n= 5;
+for(int i=5; i>=1; i--){
+for(int j =n; j>=i; j-- ){
+System.out.print(j);
+if(j>i){
+System.out.print("*");
+
+}
+}
+System.out.println();
+
+}
+
+
+}
+}
+
+//====================
+
+
+/*
+21. Write a program to print the following pattern: 
+1 
+1*3 
+1*3*5 
+1*3*5*7 
+1*3*5*7*9 
+
+*/
+class Pattern11{
+public static void main(String arg[]){
+int n= 5;
+for(int i=1; i<=n;i++){
+for(int j =1; j<=2*i-1; j=j+2){
+
+if(j!=1){
+System.out.print("*");
+}
+System.out.print(j);
+}
+System.out.println();
+}
+
+
+}
+}
+
+//=================================
+/*
+22. Write a program to print the following pattern: 
+* * * * * * * * * 
+ * * * * * * *  
+  * * * * *  
+   * * *  
+    * 
+   * * *  
+  * * * * * 
+ * * * * * * * 
+* * * * * * * * * 
+
+*/
+class Pattern12{
+public static void main(String arg[]){
+int n= 5;
+
+
+for (int i = 5; i>1; i--){
+for(int j = 1; j<=n-i; j++){
+System.out.print(" ");
+}
+for(int j = 1; j<=2*i-1; j++){
+System.out.print(" "+"*");
+}
+System.out.println( );
+}
+
+// half loop
+for (int i=1; i<=n; i++){
+for(int j=1 ; j<=n-i; j++){
+System.out.print(" ");
+}
+for(int j= 1; j<=2*i-1; j++){
+System.out.print(" "+"*");
+}
+System.out.println( );
+}
+
+}
+}
+
+
+//===============================
+/*
+23. Write a program to print the following pattern: 
+11111 
+22222 
+33333 
+44444 
+55555 
+
+*/
+class Pattern13{
+public static void main(String arg[]){
+int n= 5;
+for(int i =1; i<=n; i++){
+for(int j =1; j<=n; j++){
+System.out.print(i);
+}
+System.out.println();
+
+}
+
+}
+}
+
+//===========================
+/*
+24. Write a program to print the following pattern: 
+1 
+22 
+333 
+4444 
+55555 
+
+*/
+class Pattern14{
+public static void main(String arg[]){
+int n= 5;
+for(int i =1; i<=n; i++){
+for(int j =1; j<=i; j++){
+System.out.print(i);
+}
+System.out.println();
+
+}
+
+}
+}
+//=================================
+/*
+25. Write a program to print the following pattern: 
+1 
+12 
+123 
+1234 
+12345 
+
+*/
+class Pattern15{
+public static void main(String arg[]){
+int n= 5;
+for(int i =1; i<=n; i++){
+for(int j =1; j<=i; j++){
+System.out.print(j);
+}
+System.out.println();
+
+}
+
+}
+}
+//====================================
+/*
+
+26. Write a program to print the following pattern: 
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15
+
+*/
+
+class Pattern16{
+public static void main(String arg[]){
+int n= 5, num=1;
+for(int i=1; i<=n;i++){
+for(int j =1; j<=i; j=j+1){
+System.out.print(num+" ");
+num++;
+}
+System.out.println();
+}
+
+
+}
+}
+
+//============================
 /**/
 /**/
 /**/

@@ -24,15 +24,15 @@ class ArrayDemo{
 	b[3]=10;
 	b[4]=10;*/
 	
-	/*
-	for(int a = 0; a<5;a++){
-		b[a]=10;
-	}
+	// /*
+	// for(int a = 0; a<5;a++){
+	// 	b[a]=10;
+	// }
 
-	for(int a = 0; a<5;a++){
-		System.out.println(b[a]);
-	}
-	*/
+	// for(int a = 0; a<5;a++){
+	// 	System.out.println(b[a]);
+	// }
+	// */
 
 
 	int a[][] = {{1,2,3,4},{5,6,7,8}};
