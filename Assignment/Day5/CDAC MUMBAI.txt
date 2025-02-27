@@ -86,7 +86,7 @@ hostname -I
 
 b. Ping a remote server to check connectivity (provide a remote server address to ping). 
 Ans...
-ping -c 4 "remote_server_address"
+ping -c 4 "remote_server_address" like google.com
 
 j) File Compression:
 a. Compress the "docs" directory into a zip file
