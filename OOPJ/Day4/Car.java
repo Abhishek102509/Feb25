@@ -11,13 +11,13 @@ class Car1{
    
    void loadgas(double gas)
    {
-	   this.gas =gas;
+	   gas =gas;
 	   System.out.println("Gas loaded");
 	  
    }
    void changEfficiency(double eff)
    {
-	   this.efficency =eff;
+	   efficency =eff;
    }
    void checkGass()
    {
@@ -33,10 +33,10 @@ class Car{
 	public static void main(String args[]){
 		Car1 cr = new Car1();
 		cr.drive();
-		cr.loadgas();
-		cr.changEfficiency();
+		cr.loadgas(545);
+		cr.changEfficiency(45);
 		cr.checkGass();
-		odomeleRead();
+		cr.odomeleRead();
 	}
 	
 }
