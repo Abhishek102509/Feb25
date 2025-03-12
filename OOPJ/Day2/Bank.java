@@ -1,4 +1,4 @@
-class BankAccount{
+class Bank{
 	double balance;
 	void deposit(double balance)
 	{

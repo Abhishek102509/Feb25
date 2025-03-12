@@ -11,7 +11,7 @@ class Car1{
    
    void loadgas(double gas)
    {
-	   gas =gas;
+	   this.gas =gas;
 	   System.out.println("Gas loaded");
 	  
    }
