@@ -1,0 +1,21 @@
+class AritExceptionDemo1{
+
+public static void main(String arg[]){
+    System.out.println("Started");
+	int a = 100;
+	//int b = 100/0;
+	try{
+		
+		int b = 100/0;
+	}
+	catch(ArithmeticException e){
+		e.printStackTrace();
+		System.out.println("Cannot Divide by Zero");
+	}
+	
+	
+	
+	
+	System.out.println("finshed");
+}
+}

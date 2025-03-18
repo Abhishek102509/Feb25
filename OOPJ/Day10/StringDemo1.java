@@ -10,7 +10,7 @@ class StringDemo1{
 		String s4 = "ABCD";
 		String s5 = "ABCNDFODWFS";
 		String s6 = "djdjdjfndjdefe";
-		String s7 = "    djdjdjfndjdefe";
+		String s7 = "    djdjdjfndjdefet";
 		
 		
 		
@@ -24,11 +24,10 @@ class StringDemo1{
 		System.out.println(s5.indexOf("D"));        //4
 		System.out.println(s3.toLowerCase());       //abcdefghij
 		System.out.println(s6.toUpperCase());       //DJDJDJFNDJDEFE
-		System.out.println(s7);
-		System.out.println(s7.trim());
-		System.out.println(s1);
-		
-		System.out.println(s1.replace("A", "B"));
+		System.out.println(s7);                     //    djdjdjfndjdefet
+		System.out.println(s7.trim());              //djdjdjfndjdefet
+		System.out.println(s1);                     //ABC
+		System.out.println(s1.replace("A", "B"));   //BBC
 		//System.out.println(s3.substring(1,4));
 	 
 		
