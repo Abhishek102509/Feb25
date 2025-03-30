@@ -1,17 +1,9 @@
 class ArraysFind{
-	static int a1[] ={0,3,1,2};
-	static int n =0;
 	
-	static void display(){
-		for(int i=0;i<n; i++){
-			System.out.println(a1[n]);
-
-		}
-	}
-	
-	static int find(int key){
+	static int find(int arr[],int key){
+		int n =arr.length;
 		for(int i=0; i<n; i++ ){
-			if(a1[i]==key){
+			if(arr[i]==key){
 				return i;
 			}
 			
@@ -22,20 +14,19 @@ class ArraysFind{
 	
 	
 	public static void main(String arg[]){
+		
+	  int arr[] ={10,20,80,30,60,50,110,100,130,170};
+	int x =180;
 	
-	display();
-	int n =3;
-	
-	System.out.println((find(n)== -1)?"number not found":("number is at position "+(find(n)+1)));
-	
-	/*if(find(key)){
-		System.out.println(" "+key);
-	}else
-	{
-		System.out.println(" "+key);
-	}*/
-	
-	
+	int r =find(arr,x);
+	if(r==-1){
+		System.out.println(r);
+		System.out.println("Element x is not present");
+	}else{
+		System.out.println(r+1);
+		System.out.println("Element x is  present at index ");
+		
+	}
 	
 	}
 }
