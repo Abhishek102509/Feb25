@@ -76,10 +76,7 @@ class Contect{
 		Scanner sc = new Scanner(System.in);
 		
 		int choice;
-		
-		
-		
-	
+
 		
 		do{
 			System.out.println("\nMenu:");
@@ -93,6 +90,7 @@ class Contect{
             sc.nextLine(); // Consume the newline character
             
 			switch (choice) {
+				
                 case 1:
                     System.out.print("Enter name: ");
                     String name = sc.nextLine();
