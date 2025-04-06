@@ -63,8 +63,8 @@ class BracketDemo{
 		  if(c[i]== '{' || c[i]== '[' || c[i]== '('){
 			  b1.push(c[i]);
 	  }else if (c[i]== '}' || c[i]== ']' || c[i]== ')'){
-	  if(                                                                                                                                                                              
-	    (c[i]=='}' && b1.peek() != '{') ||
+	     if( isEmpty() ||                                                                                                                                                                          
+	        (c[i]=='}' && b1.peek() != '{') ||
 		(c[i]==']' && b1.peek() != '[') ||
 		(c[i]==')' && b1.peek() != '(')
 		){
