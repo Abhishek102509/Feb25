@@ -1,0 +1,8 @@
+1. MySQL - SQL - Exercises:-
+SQL_Exercise1 - SQL_Exercise5
+
+2. MySQL - SQL - Assignments:-
+SQL_Asgn1 - SQL_Asgn10
+
+3. SQL Practice Queries:-
+SQL Practice Queries

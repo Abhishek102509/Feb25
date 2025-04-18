@@ -1,0 +1,23 @@
+1. Create MySQL user by your name and create your own default database
+2. Solve all Exercises and Assignments with the above user
+
+3. MySQL - SQL - Exercises
+SQL_Exercise1
+
+4. MySQL - SQL - Assignments
+SQL_Asgn1 - SQL_Asgn3
+
+5. www.oracle.com
+Create Oracle Account
+Signup for MySQL, Java, and Oracle Newsletters
+MySQL Magazine, Oracle Magazine, and Java Magazine
+
+6.MySQL PDFs:-
+Intro to MySQL, MySQL Datatypes
+
+7. Download MySQL, Java, and Oracle Documentation
+https://dev.mysql.com/doc/refman/9.0/en/
+https://docs.oracle.com
+
+8. '1995-01-15' or '95-01-15'
+Why is 1970 the cut-off year?

@@ -1,0 +1,14 @@
+1. MySQL - SQL - Exercises:-
+SQL_Exercise1 - SQL_Exercise3
+
+2. MySQL - SQL - Assignments:-
+SQL_Asgn1 - SQL_Asgn6
+
+3.MySQL PDFs:-
+Intro to MySQL, MySQL Datatypes, MySQL Date and Time - Functions and Formats
+
+4. SQL Practice Queries:-
+SQL Practice Queries
+
+5. ACID Properties in RDBMS:-
+ACID Properties in RDBMS
