@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            background-image: url(gettyimages-1370880112-640x640.jpg);
+            
+        }
+        .container {
+            display: flex;
+            width: 70%;
+            /* background: #fff; */
+            border-radius: 100px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+       
+        }
+        .panel {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            height: 50px;
+            width: 50px;
+        }
+        .sign-in {
+            background-color: #ffffff;
+           
+        }
+        .sign-up {
+            background-color: #0fc2ef;
+           
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+        p{
+            color: grey;
+            margin-top: -2px;
+            margin-left: 90px;
+        }
+        p:hover{
+            color: blue;
+        }
+        .container1{
+            margin-top: 20px;
+           
+
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+           
+
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+           
+        }
+        
+        input{
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="panel sign-in">
+            <h2>Sign In</h2>
+            <div class="social-icons">
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-google"></i>
+            </div>
+            
+            <form>
+                <p class="container1">Or sign in using E-Mail Address</p>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <p>Forgot your password?</p>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="panel sign-up">
+            <h1>Create,<br>Account</h1>
+            <form>
+                <p>Sing up if you dont't have an account</p>
+                <button type="submit"  >Sign Up</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+
+* {
+    color: white;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
+.main{
+ 
+   
+    margin-left: 400px;
+    margin-right: 400px;
+
+    position: relative;
+    width: 800px;
+    height: 700px;
+    background: transparent;
+    border-radius: 15px;
+    border: 2px solid rgba(255,255,255,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+   
+}
+
+h1{
+    justify-content: center;
+    text-align: center;
+  }
+  .btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    
+  }
+  .f{
+    margin-left: 100px;
+  }
+  .l{
+    margin-left: 106px;
+  }
+  .d{
+    margin-left: 75px;
+  }
+  .e{
+    margin-left: 127px;
+  }
+  .m{
+    margin-left: 43px;
+  }
+
+  .c{
+    margin-left: 159px;
+  }
+  .a{
+    margin-left: 117px;
+  }
+  .p{
+    margin-left: 119px;
+  }
+  .s{
+    margin-left: 147px;
+  }
+  .cu{
+    margin-left: 119px;
+  }
+  table,
+    th,
+    td {
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+    }
+    button{
+        background-color: chartreuse;
+        height: 40px;
+        width: 66px;
+        border-radius: 20px;
+    }
+    button:hover{
+    background-color: fuchsia;
+    }
+
+   body{
+    background-image: url('download-5.jpeg');
+    background-repeat: no-repeat;
+   
+    background-color: aqua;
+
+   }
