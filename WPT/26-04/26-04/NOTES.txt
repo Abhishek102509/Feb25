@@ -1,0 +1,406 @@
+ // ... spread operator
+        a = [10,20,30];
+        b = [4,5,6,7];
+        c = [...a, ...b];
+        console.log(c);
+
+
+sid=101;
+        sname="Manoj";
+
+        student = {
+            id:sid,
+            name:sname
+        }
+        console.log(student);
+
+
+sid=101;
+        sname="Manoj";
+
+        student = {
+            sid,
+            sname
+        }
+        console.log(student);
+
+        x=8;
+        y=4;
+        obj = {x,y};
+        console.log(obj);
+
+o1 = {
+            id:990,
+            name:"Amit"
+        };
+
+        o2 = {
+            marks:87,
+            phone:"99011233"
+        };
+
+        o3 = {...o1,...o2}; 
+        console.log(o3);
+
+x = "id";
+y = "name"
+       obj = {
+            [x]:198,
+	    [y]:""
+        } // value of x should become the key-name for obj 
+       console.log(obj);
+
+
+function:
+
+is a collection of statements that are grouped together
+function provides code reusability
+
+single responsibility principle
+
+factorial -> {
+10 statements
+f1();
+f2();
+}
+
+f2(){}
+
+f3(){}
+
+s1
+s2
+s3
+s4
+factorial()
+.
+.
+.
+.
+factorial()
+.
+.
+.
+.
+.
+.
+factorial()
+
+100 places factorial()
+
+
+
+return-type function-name(arguments){
+
+	s1
+s2
+s3
+return value;
+
+}
+
+function name(arguments){
+	s1
+s2
+s3
+return value;
+}
+
+
+function add(x,y){
+         z = x+y;
+         return z;
+       }
+
+       result = add(2,6);
+       console.log(result);
+
+function checkEligibility(age){
+            if(age>=18){
+                console.log("eligible");
+            }
+            else{
+                console.log("tu to baccha hai");
+            }
+       }
+
+       checkEligibility(4);
+
+
+
+note: in JS functions are also considered as objects 
+
+obj = {k:v}
+
+obj = function show(){
+        console.log("hello world");
+       }
+       console.log(function show(){
+        console.log("hello world");
+       }); 
+       obj();
+
+obj = function show(){
+        console.log("hello world");
+       }
+       console.log(obj);
+       obj();
+       show(); // show reference has been destroyed when show assigned into obj
+
+we can assign a function definition into a variable reference
+and that variable now will become a function itself
+sync/async 
+
+
+ways of variable declaration/ keywords to declare a variable:
+
+1. var
+2. let
+3. const 
+
+
+a=3;
+        function demo(){
+            a=5;
+            console.log("inside func a=",a);
+        }  
+        demo(); 
+        console.log("outside func a=",a);
+
+without var, let, const keyword the variable will become window object property and always it will be having a global scope 
+
+
+1. var:
+ to assign the relevant scope to the variables we use var keyword
+	
+function demo(){
+            var a=5;
+            console.log("inside func a=",a);
+        }  
+        demo(); 
+        console.log("outside func a=",a); // can't use a here
+
+
+var a=5;
+            
+        function demo(){
+            console.log("inside func a=",a);
+        }  
+        demo(); 
+        console.log("outside func a=",a); // we can use a here as it is global now 
+
+we can redeclare a variable using var keyword
+var a=5;
+        console.log("a=",a);
+        var a=7;
+        console.log("a=",a);
+
+System.out.println(a);
+int a = 5;
+
+
+
+in js when declaration is not there:
+Uncaught ReferenceError: a is not defined
+
+if declaration is there but value is not assigned yet
+var a;
+console.log(a); undefined
+
+
+hoisting: everytime before the js code execution, the js engine will search for the declaration statements and it will place all those statements at the top of the code.
+
+
+console.log(a);
+var a=5;
+
+function show(){
+            if(true){
+                var a=5;
+                console.log("inside if a=",a); accessible here 
+            }
+            console.log("outside if a=",a); accessible here
+        }
+
+        show();
+
+2. let:
+is used to give a block scope to a variable
+the block inside the let variable is declared, only inside that block you can access let variable
+
+function show(){
+            if(true){
+                let a=5;
+                console.log("inside if a=",a); // accessible here
+            }
+            console.log("outside if a=",a); // not here
+        }
+
+        show();
+
+Cannot redeclare block-scoped variable
+
+
+console.log(a);
+        let a = 6;
+hoisting is there but we can't access let variable before its initialization
+
+
+3. const is exactly same as of let keyword but we can't change the value of const variable after its declaration
+const a=5;
+
+
+functions and their variations:
+
+
+function show(){
+            console.log("hiii");
+        }
+
+        var obj = show;
+        console.log(obj);
+
+
+we can pass a function as argument to another function
+a function that is passed as an argument of another function
+is called callback function
+
+function show(){
+            console.log("iinside func show");
+        }
+
+        function demo(arg){
+            console.log("arg =",arg);
+            arg();
+        }
+
+        demo(show);
+
+in the above example, show is passed as argument into demo
+so we can call show as callback function 
+
+
+function demo(arg){
+            console.log("arg =",arg);
+            arg();
+        }
+
+        demo(function show(){
+            console.log("iinside func show");
+        });
+
+anonymous function: a function without a name 
+
+if definition has to be passed an an argument i.e. we are writing definition into the argument directly then giving the name to this  callback function is pointless, so we can opt out of giving it a name
+
+function demo(arg){
+            console.log("arg =",arg);
+            arg();
+        }
+
+        demo(function(){
+            console.log("inside func show");
+        });
+
+
+ var sum = function(a,b){
+            var c = a + b;
+            return c;
+        }
+const rs = sum(2,7);
+        console.log(rs);
+        
+a new syntax has been introduced in order to write the anonymous functions i.e. arrow function
+to have syntactical benefits we have arrow function
+var func = ()=>{
+
+}
+
+var sum = (a,b) => {
+            var c=a+b;
+            return c;
+        }
+
+        const rs= sum(2,8);
+        console.log(rs);
+
+
+var sum = (a,b) => a+b;
+
+        const rs= sum(2,8);
+        console.log(rs);
+
+const increment = n => n+5;
+
+        const rs = increment(12);
+        console.log(rs);
+
+
+array functions
+
+var arr = [1,8,6,3,5,10,4,9,7,12];
+
+        arr.forEach((value,index)=>{
+            console.log(index,value);
+        })
+
+
+ var arr = [1,8,6,3,5,10,4,9,7,12];
+        var processArrayValues =  (value,index)=>{
+            console.log(index,value);
+        }
+        arr.forEach(processArrayValues);
+forEach() is a function, that will take a callback function as argument and it will execute that callback for each element of array
+and in callback we will get current value, index number 
+
+
+        var arr = [1,8,6,3,5,10,4,9,7,12];
+        var evenArr = [];
+        
+        arr.forEach((value)=>{
+            if(value%2==0){
+                evenArr.push(value);
+            }
+        });
+        console.log(evenArr);
+
+var arr = [1,8,6,3,5,10,4,9,7,12];
+        
+        var evenArr = arr.filter(value=>value%2==0);
+        console.log(evenArr);
+
+
+map -> 
+
+
+var arr = [1,8,6,3,5,10,4,9,7,12];
+        
+        var newArr = arr.map(value=>value*2);
+
+        console.log(newArr);
+
+
+
+
+reduce -> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

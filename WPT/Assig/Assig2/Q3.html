@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Style>
+    #id{
+        display: flex;
+        width: 200px;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        height: 30px;
+    }
+    .btn{
+
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        height: 30px;
+    }
+    .btn,Button{
+        border-radius: 20px;
+        color: brown;
+    }
+    Button:hover{
+        background-color:green;
+        cursor: pointer;
+    }
+
+
+
+</Style>
+
+<body>
+    <div class="main">
+        <select name="drop" id="Dropdown">
+            <option value="Item1">Select city</option>
+            <option value="Item1">Mumbai</option>
+            <option value="Item2">Pune</option>
+            <option value="Item3">Nasik</option>
+        </select>
+    </div>
+    <div class="btn">
+
+        <Button onclick="remove()">Remove</Button>
+    </div>
+   
+    <Script>
+        function remove(){
+
+            const dropdown = document.getElementById("Dropdown");
+                if(dropdown.options.length >0){
+                dropdown.remove(dropdown.selectedIndex);
+                }
+                else{
+                    alert("No item")
+                }
+        }
+
+    </Script>
+</body>
+</html>

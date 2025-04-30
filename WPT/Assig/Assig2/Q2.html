@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main,.pmain{
+             display: flex;
+            justify-content: center;
+            
+        }
+        .btn{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+
+        }
+        .out{
+
+            display: flex;
+            justify-content: center;
+            border: 5px solid rgb(239, 239, 1);
+            width: 200px;
+            margin-left: 700px;
+            margin-right: 700px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form" class="main">
+        <form action="">
+            <label for="fname"> First Name :</label> &nbsp;
+              <input type="text" id="fname"> <br>
+              <label for="lname">Last Name :</label> &nbsp;
+             <input type="text" id="lname"><br>
+    
+             <label for="mob"> Mobile No. :</label> &nbsp;
+             <input type="text" id="mob" maxlength="10" size="10"> <br>
+             <label for="email">Email Id </label> &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="email" id="email">
+            
+        </form>
+       
+     </div>
+     
+     <div class="btn">
+     <Button class="btn" onclick="priint()">Button </Button>
+    
+    </div>
+    <div  class="out">
+        <p  class="pmain" id="output"></p>
+
+    </div>
+    
+    <script>
+        function priint(){
+           const Fname = document.getElementById("fname").value;
+          const Lname = document.getElementById("lname").value;
+           const MobileNo = document.getElementById("mob").value;
+          const email= document.getElementById("email").value;
+
+           const output = `
+           First Name : ${Fname} <br>
+          Last Name : ${Lname} <br>
+          Mobile No. : ${MobileNo} <br>
+          Email Id : ${email}
+           `;
+           document.getElementById("output").innerHTML = output;
+        }
+    </script> 
+</body>
+</html>

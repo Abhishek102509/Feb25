@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        .hover{
+            color: red;
+        }
+    </style>
+
+<body>
+
+        <a href="#" id="hoverlink">[On mouse over here bold words of the following paragraph will be highlighted]</a>
+        <p>
+            <b>We</b>have just started <b>this</b> section for the users (<b>beginner</b> to intermediate) who <b>want</b> to work with <b>various</b> JavaScript <b>problems</b> and write scripts online to <b>test</b> their JavaScript <b>skill</b>.
+        </p>
+
+    <Script>
+        const link= document.getElementById('hoverlink');    
+        const bold = document.querySelectorAll('b');
+
+        link.addEventListener('mouseover',()=>{
+            bold.forEach(word => {
+                word.classList.add('hover')
+                
+            });
+
+        });
+
+        link.addEventListener('mouseout',()=>{
+            bold.forEach(word => {
+                word.classList.remove('hover')
+            });
+
+        });
+
+
+
+    </Script>
+</body>
+</html>

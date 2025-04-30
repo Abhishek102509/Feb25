@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Ordering and Pickup System</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+</head>
+<style>
+    nav{
+         position: fixed; 
+        top: 0; 
+        width: 100%; 
+        background: #2c3e50; 
+        color: white; 
+        padding: 15px; 
+        display: flex; 
+        justify-content: space-between;
+    }
+    .f1{
+        display: flex; 
+        align-items: center;
+    }
+    a{
+        color: white; 
+        text-decoration: none; 
+        margin: 0 10px;
+    }
+    #home{
+        margin-top: 80px;  
+        padding: 20px; 
+        text-align: center;
+
+    }
+    button{
+        background: #3498db; 
+        color: white; 
+        border: none; 
+        padding: 10px 20px; 
+        margin: 10px;
+        border-radius: 9px;
+    }
+    marquee{
+        background: #2c3e50; 
+        color: white; 
+        padding: 10px;
+    }
+
+    footer{
+        background: #2c3e50; 
+        color: white; 
+        padding: 20px; 
+        text-align: center;
+    }
+    footer,a{
+        color: white; 
+        margin: 0 5px;
+    }
+    button:hover{
+        background-color: crimson;
+        border-radius: 50px;
+        
+    }
+    .navIcon{
+        display: flex;
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+
+</style>
+<body>
+    <!-- Navigation Bar -->
+    <nav >
+        <div class="f1" >
+            <img src="logo.jpg" alt="Logo" style="height: 40px; margin-right: 10px;">
+            <h1>Food Delevery</h1>
+        </div>
+        <div class="navIcon">
+            <a href="#home" >Home</a>
+            <a href="#about" >About</a>
+            <a href="#signup" >Sign Up</a>
+            <a href="#signin" >Sign In</a>
+            <a href="#contact" >Contact</a>
+            <span style="display: none;">☰</span> <!-- Hamburger menu  -->
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home">
+        <h2>Welcome Online food Delevery</h2>
+        <p>All type of food is avalabel</p>
+        <button id="btn" >Learn More About food</button>
+    </section>
+
+    <!-- Scrolling Text -->
+    <marquee >
+        Welcome
+    </marquee>
+
+    <!-- About Page -->
+    <section id="about" style="padding: 20px;">
+        <h2>About Us</h2>
+        <p>Related to Restorent.</p>
+    </section>
+
+    <!-- Sign Up Page -->
+    <section id="signup" style="padding: 20px;">
+        <h2>Sign Up</h2>
+        <form>
+            <label>Name:</label><br>
+            <input type="text"><br>
+            <label>Email:</label><br>
+            <input type="email"><br>
+            <label>Password:</label><br>
+            <input type="password"><br>
+            <button type="submit" style="margin-top: 10px;">Sign Up</button>
+        </form>
+    </section>
+
+    <!-- Sign In Page -->
+    <section id="signin" style="padding: 20px;">
+        <h2>Sign In</h2>
+        <form>
+            <label>Email:</label><br>
+            <input type="email"><br>
+            <label>Password:</label><br>
+            <input type="password"><br>
+            <button type="submit" style="margin-top: 10px;">Sign In</button>
+        </form>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" style="padding: 20px;">
+        <h2>Contact Us</h2>
+        <form>
+            <label>Name:</label><br>
+            <input type="text"><br>
+            <label>Email:</label><br>
+            <input type="email"><br>
+            <label>Message:</label><br>
+            <textarea></textarea><br>
+            <button type="submit" style="margin-top: 10px;">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer >
+        <p>Contact: Abhi@food.in | Phone: 5454545454</p>
+        <p>
+            <a href="#" >Facebook</a>
+            <a href="#" >Twitter</a>
+            <a href="#">LinkedIn</a>
+        </p>
+
+    </footer>
+</body>
+</html>
