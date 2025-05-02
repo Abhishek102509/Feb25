@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fetch ids from server fetchIds
+        // fetch data based on id  fetchData
+        // based on data check voting eligibility checkAge
+
+        async function fetchIds(){
+            return new Promise((resolve,reject)=>{
+                console.log("fetching ids...");
+                setTimeout(() => {
+                    var ids = [167,124,181,101]
+                    if(ids){
+                        resolve(ids);
+                    }
+                    else{
+                        reject("Error: cannot find square");
+                    }
+                }, 2000);
+            });
+        }
+        async function fetchData(id){
+            return new Promise((resolve,reject)=>{
+                console.log("fetching data for...",id);
+                setTimeout(() => {
+                    var userData={userId:id,name:"Aman",phone:"87777111",age:23};
+                    
+                    if(userData){
+                        resolve(userData);
+                    }
+                    else{
+                        reject("Error: cannot find data");
+                    }
+                }, 1000);
+            });
+        }
+
+        async function checkEligibility(age){
+            return new Promise((resolve,reject)=>{
+                console.log("checking age...");
+                setTimeout(() => {
+                    if(age>=18){
+                        resolve("User is eligible");
+                    }
+                    else{
+                        reject("Error: tu to baccha hai..!");
+                    }
+                }, 1000);
+            });
+        }
+
+        // fetchIds()
+        // .then((idResult)=>{
+        //     console.log("ids are",idResult);
+        //     return fetchData(idResult[1]);
+        // }).
+        // then((dataResult)=>{
+        //     console.log(dataResult);
+        //     return checkEligibility(dataResult.age);
+        // })
+        // .then((msg)=>{
+        //     console.log(msg);
+        // })
+        // .catch((error)=>{
+        //     console.log(error);
+        // });
+        async function handlePromise(){
+            try {
+                const ids = await fetchIds();
+                console.log("ids are",ids);
+                const userData = await fetchData(ids[2]);
+                console.log("data is",userData);
+                const msg = await checkEligibility(userData.age);
+                console.log(msg);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        handlePromise();
+    </script>
+</body>
+</html>

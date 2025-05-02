@@ -1,0 +1,132 @@
+Ajax: Asynchronous JavaScript And Xml
+
+From browser using ajax, we can send a request to the server (for any purpose) and get the response without blocking other process in browser and also without reloading the browser
+
+
+steps:
+1. create an object that will send request
+   var xhr = new XMLHttpRequest();
+
+2. mention url and request method 
+	xhr.open(method, url)
+
+3. send the request
+
+  xhr.send()
+
+4. read response
+   to read the response we need to get the state of the request
+   to get the state of the request there is a property of xhr object i.e. readyState
+readyState is having values ranging from 0 to 4
+
+0 -> XMLHttpRequest object is created
+1 -> when request has been opened i.e. when open() has been called
+2 -> when request has been sent
+3 -> when server accepts the request and starts processing it
+4 -> when response is ready at the client side/ response received from server
+
+xhr.onreadystatechange=()=>{
+	
+}
+ when ready state is changed then onreadystatechange event will be fired by browser
+
+
+
+"[{},{},{}]"
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="fetchData()">Fetch Data</button>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script>
+        function fetchData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+            xhr.send();
+            xhr.onreadystatechange=()=>{
+                // console.log(xhr.readyState);
+                
+                if(xhr.readyState === 4){
+                    if(xhr.status==200){
+                        console.log("got response...");
+                        // console.log([10,20,40]);
+                        // console.log(xhr.responseText); 
+                        var data = JSON.parse(xhr.responseText);
+                        console.log(data);
+                        var tbody = document.getElementById("tbody");
+                        for(var i=0;i<data.length;i++){
+                            var tr = document.createElement("tr");
+                            var idCol = document.createElement("td");
+                            var nameCol = document.createElement("td");
+                            var phoneCol = document.createElement("td");
+                            var usernameCol = document.createElement("td");
+                            var emailCol = document.createElement("td");
+                            idCol.innerHTML = data[i].id;
+                            nameCol.innerHTML = data[i].name;
+                            phoneCol.innerHTML = data[i].phone;
+                            usernameCol.innerHTML = data[i].username;
+                            emailCol.innerHTML = data[i].email;
+                            tr.appendChild(idCol);
+                            tr.appendChild(nameCol);
+                            tr.appendChild(phoneCol);
+                            tr.appendChild(usernameCol);
+                            tr.appendChild(emailCol);
+                            tbody.appendChild(tr);
+                        }
+                    }
+                    // else if(){
+                    //  to handle other status code apart from 200
+                    // }
+                    
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
+
+
+Bootstrap:
+
+media queries and flex related properties
+
+
+grid system :
+entire browser width will be divided into 12 equal sections
+
+col-n: col-1, col-2, col-3, …, col-12
+
+
+
+
+
+
+
+
+
+
+
+   

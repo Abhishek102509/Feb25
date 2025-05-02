@@ -1,0 +1,39 @@
+<!-- Exercise 3:
+Simulate a network request by creating a function fetchData that takes a URL and a
+callback as parameters. Use setTimeout to simulate a delay and then call the
+callback with a string representing a response.
+Requirements:
+● After a delay, log the “response” to the console. -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+
+        function fetchData(URL,callback){
+            console.log(`Fetching data from: ${URL}`);
+
+            setTimeout(()=>{
+                const response = `Response from ${URL}`;
+                callback(response);
+            },2000);
+                
+        }
+        fetchData("UCIOXIijbxm6aiwWgj8gYM3w",function(response){
+            console.log(response);
+        });
+
+
+    </Script>
+</body>
+</html>

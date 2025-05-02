@@ -1,0 +1,311 @@
+DOM Manipulation:
+
+What is DOM ?
+Document Object Model:
+whenever any html file is loaded into the browser, at that time before displaying the web page content it prepares a tree like structure of all the tags
+This tree structure is referred as DOM
+predefined document object is the object of DOM
+
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body>
+<button>fetch data</button>
+   <div>
+     <h1>hii</h1>
+     <a href="https://www.flipkart.com">Visit e-commerce</a>
+   </div>
+   <form>
+      <input><p>password is in correct format</p>
+	
+   </form>
+ </body>
+</html>
+
+once the page is loaded in the browser and dom has been prepared
+then in that case if dynamically we are updating the dom structure then it is known as dom manipulation
+
+1. we can introduce a new element into the web page
+2. we can remove an existing element
+3. we can change the content of existing elements
+4. we can get the content of elements
+5. we can get the value of attributes
+6. we can change the value of attributes
+7. we can change the style of elements
+
+note: with the help of document object we can perform all the above operations
+
+to perform any manipulation on the html elements, first we need to get their objects 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myheading">This is heading</h1>
+
+    <script>
+        var obj = document.getElementById("myheading");
+        console.log(obj);
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myheading">This is heading</h1>
+
+    <script>
+        var obj = document.getElementById("myheading");
+        console.log(obj.innerHTML); // innrHTML will return the content inside of the tag
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myheading">This is heading</h1>
+    <button onclick="getContent()">Get content</button>
+    <script>
+        function getContent(){
+            var obj = document.getElementById("myheading");
+            console.log(obj.innerHTML); 
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myheading">This is heading</h1>
+    <button onclick="changeContent()">Update content</button>
+    <script>
+        function changeContent(){
+            var obj = document.getElementById("myheading");
+            obj.innerHTML = "Updated content...!"
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myheading">This is heading</h1>
+    <div id="container">
+
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi rem, nesciunt illum ad tempora distinctio sed, facilis voluptatibus earum ipsum officiis, sint quidem. Corporis voluptas aperiam dolor magnam impedit vero.</p>
+    <button onclick="addElement()">Add new heading</button>
+    <script>
+        function addElement(){
+            var heading = document.createElement("h2");
+            heading.innerHTML = "Hello h2 heading";
+            var containerDiv = document.getElementById("container");
+            containerDiv.appendChild(heading);
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myheading">This is heading</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi rem, nesciunt illum ad tempora distinctio sed, facilis voluptatibus earum ipsum officiis, sint quidem. Corporis voluptas aperiam dolor magnam impedit vero.</p>
+    <button onclick="removeElement()">Remove element</button>
+    <script>
+        function removeElement(){
+            var paraObj = document.getElementById("para");
+            paraObj.remove();
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+</html>
+
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textfield">
+    <a href="https://www.flipkart.com" id="shopping-link">online shopping</a>
+    <button onclick="getElementAttributes()">get attributes</button>
+    <script>
+        function getElementAttributes(){
+           var textfield = document.getElementById("textfield");
+           var anchorObj = document.getElementById("shopping-link");
+           var typeValue = textfield.getAttribute("type");
+           var hrefValue = anchorObj.getAttribute("href");
+           console.log(typeValue,hrefValue);
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textfield">
+    <a href="https://www.flipkart.com" id="shopping-link">online shopping</a>
+    <button onclick="changeElementAttributes()">get attributes</button>
+    <script>
+        function changeElementAttributes(){
+           var textfield = document.getElementById("textfield");
+           var anchorObj = document.getElementById("shopping-link");
+           textfield.setAttribute("type","password");
+           anchorObj.setAttribute("href","https://www.amazon.in");
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="password" id="passwordfield">
+    <button onclick="togglePassword()" id="btn">show</button>
+    <script>
+        function togglePassword() {
+            var passwordfield = document.getElementById("passwordfield");
+            var btn = document.getElementById("btn");
+            if (btn.innerHTML == "show") {
+                passwordfield.setAttribute("type", "text");
+                btn.innerHTML = "hide";
+            }
+            else{
+                passwordfield.setAttribute("type","password");
+                btn.innerHTML = "show";
+            }
+
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="field1">
+    <input type="text" id="field2">
+    <button onclick="add()">add</button>
+    <h2 id="result"></h2>
+    <script>
+        function add(){
+            var n1 = document.getElementById("field1").value;
+            var n2 = document.getElementById("field2").value;
+            var n3 = parseInt(n1)+parseInt(n2);
+            document.getElementById("result").innerHTML = "sum is "+n3;
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="textfield" onkeyup="validate()">
+    <p id="validation-msg"></p>
+    <script>
+        function validate(){
+           var textfield = document.getElementById("textfield");
+           var para = document.getElementById("validation-msg");
+           if(textfield.value.length != 0){
+            para.innerHTML="value is valid !"
+            para.style.color="green";
+           }
+           else{
+            para.innerHTML="Value is required!";
+            para.style.color="red";
+           }
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

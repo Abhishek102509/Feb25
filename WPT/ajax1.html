@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <button id="fechdata">data</button>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+    <script>
+
+        var fechdata = document.getElementById('fechdata');
+        fechdata.addEventListener('click', showdata);
+
+        function showdata() {
+           // console.log("show data");
+
+            // var xhr = new XMLHttpRequest()
+            // xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+
+            //    xhr.send();
+            //    xhr.onload = function(){
+            //     if(this.status===200){
+            //     console.log("this.responcetext")    
+            //     }
+            //     else{
+            //         console.log("some rerr");
+            //     }
+            //    }
+            // On loade ka matalb process complete  ho gayi hai
+
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+            xhr.send();
+            xhr.onreadystatechange=()=>{
+                if (xhr.readyState === 4) {
+                    if (xhr.status == 200) {
+                        console.log("got responce");
+                        var data = JSON.parse(xhr.responseText);
+                        console.log(data);
+
+                        var tbody = document.getElementById("tbody");
+                        for(var i=0;i<data.length;i++){
+                            var tr = document.createElement("tr");
+                            var idCol = document.createElement("td");
+                            var nameCol = document.createElement("td");
+                            var phoneCol = document.createElement("td");
+                            var usernameCol = document.createElement("td");
+                            var emailCol = document.createElement("td");
+                            idCol.innerHTML = data[i].id;
+                            nameCol.innerHTML = data[i].name;
+                            phoneCol.innerHTML = data[i].phone;
+                            usernameCol.innerHTML = data[i].username;
+                            emailCol.innerHTML = data[i].email;
+                            tr.appendChild(idCol);
+                            tr.appendChild(nameCol);
+                            tr.appendChild(phoneCol);
+                            tr.appendChild(usernameCol);
+                            tr.appendChild(emailCol);
+                            tbody.appendChild(tr);
+
+                        }
+                    }
+                   
+                }
+            }
+
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="textfield" onkeyup="validate()">
+    <p id="validation-msg"></p>
+    <script>
+        function validate(){
+           var textfield = document.getElementById("textfield");
+           var para = document.getElementById("validation-msg");
+           if(textfield.value.length != 0){
+            para.innerHTML="value is valid !"
+            para.style.color="green";
+           }
+           else{
+            para.innerHTML="Value is required!";
+            para.style.color="red";
+           }
+        }
+        // innrHTML will return the content inside of the tag
+    </script>
+</body>
+
+</html>

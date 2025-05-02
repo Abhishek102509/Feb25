@@ -1,0 +1,56 @@
+<!-- Exercise 4:
+Modify fetchData from Exercise 3 to include error handling.
+Requirements:
+● Call the callback with an error message if an error occurs; otherwise, pass
+the “response.”
+● Handle the error gracefully by logging it if it occurs.
+Exercise 5:
+Using fetchData from Exercise 4, create another function p -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <Script>
+            function fetchData(URL,callback){
+            console.log(`Fetching data from: ${URL}`);
+
+            setTimeout(()=>{
+               
+                
+
+                const error = ` aa ${UL}`; 
+                const response = `Response from ${URL}`;
+
+                if(error){
+                    callback(error);
+                }else{
+                    callback(response);
+                }
+                
+            },2000);
+                
+        }
+        fetchData("https://example.com/api",function(error, response){
+            if(error){
+                console.error(error);
+            }else{
+            console.log(response);
+            }
+        });
+
+
+
+    </Script>
+</body>
+</html>

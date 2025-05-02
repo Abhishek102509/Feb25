@@ -1,0 +1,79 @@
+Node JS:
+it is a runtime environment for js
+
+node js enables a developer to run a js program directly without using the browser
+
+module: collection of functions, properties
+
+types of modules:
+
+1. in-built modules : modules which are predefined by node js 
+                      eg: fs, http, etc
+
+2. user defined modules: module created by a developer according to the requirement
+
+3. 3rd party module : modules provided by 3rd party (neither by node js nor a developer has created), we manually have to download and install them
+eg: express js, react js, etc
+
+npm: node package manager  : it is a cli tool
+
+
+
+demomodule -> show(), hide()
+
+index.js
+
+var obj = require("demomodule");
+obj.show();
+obj.hide();
+
+
+
+const fs = require("fs");
+
+fs.writeFile("myfile.txt","hello world", (error)=>{
+    if(!error){
+        console.log("write operation completed!..");
+    }
+    else{
+        console.log("write operation failed !");
+    }
+});
+console.log("after writing into file....!");
+
+
+const fs = require("fs");
+
+
+fs.writeFileSync("demofile.txt","this is a dummy text data")
+console.log("after writing into file....!");
+
+
+const fs = require("fs");
+
+fs.readFile("myfile.txt",(error,data)=>{
+    if(!error){
+        console.log(data.toString());
+    }
+    else{
+        console.log(error);
+    }
+});
+console.log("after reading file...!");
+
+
+
+const fs = require("fs");
+
+var data = fs.readFileSync("myfile.txt");
+console.log(data.toString());
+console.log("after reading file...!");
+
+
+
+
+
+
+
+
+
