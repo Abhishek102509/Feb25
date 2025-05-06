@@ -1,0 +1,83 @@
+API: Application Programming Interface
+
+train search, pnr status, ticket booking, cancel 
+
+Using API we can use functionalities and services of one application into another application
+
+
+API's can be accessed cross technology
+
+mobile app -> android java, ios objective c
+website -> react js/ angular
+
+
+
+Securing api using login authentication:
+
+
+restaurant-> self service
+
+payment counter -> token 
+food counter -> token -> 
+
+resource -> food 
+security -> payment
+
+Admin -> login api -> validations on username and password -> successful or failure
+
+GET /student 
+DELETE /student/:id 
+PUT /student/:id
+
+
+how to generate the token at the time of login:
+
+
+we will use JWT (JSON Web Token)
+
+payload: json data that token should carry
+
+while creating a token we can mention the payload as json object
+
+part1.part2.part3
+
+part1 : header -> type, alg
+part2: payload
+part3: signature-> secret key
+
+jsonwebtoken -> sign(payload,"secret-key") will create a token 
+
+
+
+
+Admin -> login api -> validations on username and password -> successful or failure
+
+GET /student 
+DELETE /student/:id 
+PUT /student/:id
+POST /student
+
+in secured apis, token will be passed into the request header & name of that header is Authorization
+
+middleware:
+1. read token value from request Authorization header
+2. check token existance
+3. if token is there in Authorization header then verify the token validity
+   if token is valid -> next();
+	if token is not valid -> respond with error message 
+4. if token is not there in Authorization header:
+	
+	respond with error message 
+
+
+demo.js:
+var x;
+x=6;
+export default x;
+
+if only single property has to be exported from a js file and that is too after its declaration and initialization, so in this case we should use "export default"
+
+
+
+
+

@@ -1,0 +1,100 @@
+till now we have an idea to handle the get request
+
+app.get(url,function);
+
+
+ways of passing data from client to server:
+1. url parameter : 2000 chars limit, 
+2. request body: data attached with request 
+   GET request method doesn't support request body
+   POST, PUT, PATCH methods support request body
+
+
+note: by default express app doesn't know that any of the request now can contain the request body as well because we have different different type of data in the body
+now its the responsibility of the developer to inform the express to process the request body of the desired type of data
+
+
+middleware: is a function that will be getting called when request arrives on the server but before the request processor function
+
+const myMiddleware = (request,response,next)=>{
+    console.log("inside middleware");
+    next();
+}
+
+app.post("/sum",myMiddleware,(request,response)=>{
+    //request.params // it will give url parameters
+    const data = request.body; // it will give data passed into the request body
+    console.log(data);
+    response.send("sum");
+});
+
+app.use(myMiddleware); // it will register a middleware that has to be cled on each and every request/url
+
+
+import express from 'express';
+
+const app = express();
+
+const myMiddleware = (request,response,next)=>{
+    console.log("inside middleware");
+    next();
+}
+
+app.use(myMiddleware); // it will register a middleware that has to be cled on each and every request/url
+
+app.get("/",(request,response)=>{
+    response.send("welcome to our app");
+});
+
+app.post("/sum",(request,response)=>{
+    //request.params // it will give url parameters
+    const data = request.body; // it will give data passed into the request body
+    console.log(data);
+    response.send("sum");
+});
+
+app.listen(9600,()=>{
+    console.log("server started...!");
+});
+
+
+
+to process the json request body, express is giving a middleware that should be called everytime before actually processing the request
+
+import express from 'express';
+
+const app = express();
+
+app.use(express.json()); // it will register a middleware that has to be cled on each and every request/url
+
+app.get("/",(request,response)=>{
+    response.send("welcome to our app");
+});
+
+app.post("/sum",(request,response)=>{
+    //request.params // it will give url parameters
+    const data = request.body; // it will give data passed into the request body
+    console.log(data);
+    response.send("sum");
+});
+
+app.listen(9600,()=>{
+    console.log("server started...!");
+});
+
+
+
+127.0.0.1:9400 GET {message:"Welcome to home"} 200
+
+127.0.0.1:9400/factorial/5  GET {factorial:120} 200, if -ve {message:"Negative value"} 400
+
+127.0.0.1:9400/product POST {product:40} 200
+
+
+npm init -y
+npm i express
+
+
+
+
+

@@ -1,0 +1,88 @@
+3rd party modules/dependancy:
+
+npm install package-name;
+
+npm install express
+
+note: when we install 3rd party module/package its entry will go into package.json file, also it will create a new folder node_modules & one file package-lock.json
+
+all the downloaded dependency's folders and files will go inside of node_modules
+
+npm install bcrypt;
+
+why package.json file maintains the name of dependencies:
+
+if we want to share the project or move the project to another folder location or to another system we will not carry node_modules due to its 
+bulky size
+
+apart from the node_module carry entire project structure 
+and on new location we need node_modules folder 
+so we just need to run this command: npm install 
+"npm install" will look into the dependencies key of package.json file and it will install all the mentioned dependencies and will create node_modules folder into the new location as well 
+
+
+two types of 3rd party modules:
+
+1. local module: installed within a project 
+p1->express p2 p3
+
+deciding factor: if a module is providing predefined functions, or properties etc that we will be using them into our code then always it should be installed locally 
+and local modules are only referred as dependency
+
+
+2. global module: doesn't installed into any specific project 
+   it will be installed at a centralized location(installed at the installation folder of node js c:/program files/nodejs) from where any project can utilize that module
+
+there are certain modules which are not providing any functions or porperties, instead they will be giving some tools
+
+so we can't say that they are dependencies
+it is a recommendation that we should install this kind of module globally
+note: global module entry should not be there in package.json file
+
+npm install -g module-name
+npm install -g nodemon
+
+
+students data:
+
+127.0.0.1:5000/students GET -> send list of all the students in response
+127.0.0.1:5000/students/1 GET -> send data if the single student
+127.0.0.1:5000/students/1 DELETE 
+
+https://www.facebook.com -> base url
+facebook.com/login -> sub url
+faceboook.com/signup -> sub url
+
+routing 
+
+express js: is a library using which we can create a server
+
+
+to handle the routs we need object of express app
+
+const app = express()
+
+127.0.0.1:5000/ GET welcome
+127.0.0.1:5000/login GET welcome to login 
+127.0.0.1:5000/sum GET performing addition
+
+GET-> get(), POST-> post(), PUT -> put(), DELETE -> delete()
+
+
+app.get(url1,(request,response)=>{
+
+})
+
+app.get(url2,(request,response)=>{
+
+})
+
+we can pass data on the url in this way:
+http://127.0.0.1:3500/sum/3/5
+
+the data passed on the url is known as url parameter
+
+
+
+
+

@@ -1,0 +1,13 @@
+{
+  "name": "2-05-morning",
+  "version": "1.0.0",
+  "description": "my dummy server",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "admin",
+  "license": "ISC"
+}

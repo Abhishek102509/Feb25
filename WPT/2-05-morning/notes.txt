@@ -1,0 +1,121 @@
+node js: runtime 
+.js 
+node filename.js
+
+inbuilt -> fs, http, etc
+user defined -> 
+3rd party -> 
+
+const fs = require("fs");
+
+Use defined moduleexports.sum = function(a,b){
+    return a+b;
+}
+
+exports.product = function(a,b){
+    return a*b;
+}
+// exports.property-name = value
+
+
+
+http module: it will provide certain functions using which we can create a server
+
+
+localserver ip address: 127.0.0.1 -> localhost
+
+127.0.0.1 or localhost
+
+social media  3000
+e-commerce  4000
+student mgmt. 5000
+
+Port number: 
+
+ip address + port number = socket
+
+ip:port
+127.0.0.1:5000
+
+
+
+const http = require('http');
+var server = http.createServer((request,response)=>{
+    response.write("hello world");
+    response.end();
+}); // create a server and will return a server object
+
+server.listen(4500,()=>{
+    console.log("server started");
+}); // start listening on the requests
+
+const http = require('http');
+var server = http.createServer((request,response)=>{
+    var x=5;
+    var y=3;
+    var z=x+y;
+    response.write(`sum is ${z}`);
+    response.end();
+}); // create a server and will return a server object
+
+server.listen(4500,()=>{
+    console.log("server started");
+}); // start listening on the requests
+
+
+along with the main file or the complete source code files we must have one config file package.json
+e can put some meta data of the project into package.json file
+eg: project name, author, version, git url, license, 3rd party module names, main file (starting file) index.js
+
+ways to create package.json file:
+1. manually
+2. with the help of npm : npm init
+
+ways to include module in a js file:
+1. require()
+2. import statement 
+
+two standards are there to work with js:
+1. common js -> function, require, prototypes
+2. ES-> ecma script -> ()=>{}, class, import 
+
+standard used to decide that what syntax we need to write, what rules and guidelines will be there
+
+
+fs -> writeFile, writeFileSync
+
+import {properties} from 'module-name'; 
+
+import {writeFile, writeFileSync} from 'fs';
+
+writeFile();
+writeFileSync();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
