@@ -1,0 +1,99 @@
+class Name extends Component{
+
+render(){
+
+}
+
+}
+
+jsx
+
+function component:
+
+function MyComponent(){
+	return (
+		<div>
+		</div>
+	)
+}
+
+demo.js
+
+var x;
+x=5;
+export default x;
+
+
+
+virtual DOM: is a copy of the original DOM
+Virtual DOM is more faster than actual DOM
+
+virtual DOm -> actual DOM
+virtual DOM looks for the difference between two consequent renders and only update the section on the web page which is updated
+
+
+
+props:
+
+tag-> attributes
+component-> props
+<MyComponent text=""></MyComponent>
+
+a component can't decide its own prop's values
+a component can't change the value of its props
+
+a component can only receive the props and use its value either on UI, or into any business logic
+
+a function component receives the props into the argument
+
+<MyComponent text="Hello world" heading="welcome"></MyComponent>
+
+now react js will create a json object for all the props:
+{text:"hello world",heading:"welcome"}
+
+export function MyComponent(props){
+    return (
+        <div>
+            <h1>{props.heading}</h1>
+            <p>{props.text}</p>
+        </div>
+    )
+}
+
+if we have passed props into class component, then props will become class member property
+
+import { Component } from "react";
+
+export class DemoComponent extends Component{
+    render(){
+        return (
+            <div>
+                <h1>{this.props.heading}</h1>
+                <p>{this.props.text}</p>
+            </div>
+        )
+    }
+}
+
+
+
+
+Routing: navigation 
+
+we will provide mapping of url's with component
+
+npm I react-router-dom
+
+
+Route, Routes, BrowserRouter
+
+<Route> : to contain the mapping of urls with component
+
+<Route path="/" element={<Home></Home>}></Route>
+
+<Routes> : must be a container of all the Route components
+
+BrowserRouter
+
+
+

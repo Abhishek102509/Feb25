@@ -9,7 +9,7 @@ export function registerAdmin(request,response){
     try {
         const data = request.body; //
         const encryptedPasswrod = hashSync(data.password, 10); // sync
-        data.password="";
+        data.password=" ";
         const qry = `insert into admin values(${data.id},'${data.name}','${data.username}','${encryptedPasswrod}')`;
         conn.query(qry,(error,result)=>{
             if(error){
