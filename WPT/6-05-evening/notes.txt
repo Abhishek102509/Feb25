@@ -1,0 +1,76 @@
+fetch(url,{
+	method:'POST',
+	body:data,
+        headers:{'Authorization':'Bearer eyjgdfg'}
+});
+
+axios 
+
+npm I axios 
+
+import axios from 'axios';
+
+axios.get(url)
+axios.post(url,data)
+axios.put(url,data)
+axios.delete(url);
+
+
+in react component, if we have an array of data and we want to render the list of its items on UI, react will ask for the array of html ui elements 
+
+[10,20,30,40]
+
+[<h1>10</h1>,<h1>20</h1>,<h1>30</h1>]
+
+
+lifecycle into function component:
+
+with the help of hooks we can implement the lifecycle in a function component
+
+useEffect(effect-callback,dependency-array)
+
+componentDidMount: 
+
+useEffect(()=>{
+
+},[]);
+
+componentDidUpdate:
+
+useEffect(()=>{
+
+},[list of states onto update of which the effect should be called]);
+
+
+componentWillUnmount:
+
+useEffect(()=>{
+
+	return ()=>{
+		
+	}
+
+},[])
+
+
+form data handling in react component:
+1. create a state to contain the form data, and initialize it 
+2. read the input value at the time when user starts typing into the field, and store that value into state
+3. at the time of submit we will ask the state to get the form data 
+
+
+CORS: Cross Origin Resource Sharing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
