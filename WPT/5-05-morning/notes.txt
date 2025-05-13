@@ -1,0 +1,98 @@
+
+
+HTML
+CSS
+JS
+
+school website:
+
+Home.html -> <nav>… 50 lines html code</nav>  <footer>80 line html code</footer>
+
+About.html -> <nav>… 50 lines html code</nav> <footer>80 line html code</footer>
+
+gallery.html <nav>… 50 lines html code</nav> <footer>80 line html code</footer>
+
+contact.html <nav>… 50 lines html code</nav> <footer>80 line html code</footer>
+
+admissions.html <nav>… 50 lines html code</nav> <footer>80 line html code</footer>
+
+feespayment.html <nav>… 50 lines html code</nav> <footer>80 line html code</footer>
+
+2. browser will take a reload, whenever user visits any new page
+   if any element is same for every page then still browser will load it again and again
+
+
+
+React JS: is a library to develop frontend of a web application
+developed by Facebook
+Using React js we develop a single page application
+
+SPA: will have only 1 html file 
+index.html
+navbar
+home content
+footer
+
+about-us
+gallery
+
+instead of creating different html files, here in react js we have to create components
+component: ui element 
+
+
+react app: folder structure and file structure
+	   package.json
+            index.js
+	  required dependencies
+          boilerplate code
+
+
+cli tool -> create-react-app, vite
+
+npm create vite@latest
+
+in every react application, one predefined component is always there i.e. App component
+
+Navbar.js or .jsx
+Footer.js
+Home.js
+
+main.jsx -> rendering -> App.jsx
+
+two types of components:
+1. class based component: to represent a component if class has been created 
+
+create a own class, inherit Component class that is predefined in react module, then only your own class will be treated as react component
+
+ MyComponent -> <MyComponent></MyComponent>
+ LoginForm -> <LoginForm></LoginForm>
+
+2. function based component :to represent a component if we are creating a function
+function component is always a lightweight component 
+
+
+
+jsx -> javascript and xml
+jsx extension enabling a developer to write js code along with html code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
